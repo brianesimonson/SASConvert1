@@ -9,3 +9,6 @@ requires-python = ">=3.10"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[project.scripts]
+claims-run = "claims_python.run_claims:main"
