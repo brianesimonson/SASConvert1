@@ -1,0 +1,52 @@
+var,value,notes
+permyear,RY2026,
+Permyear1,RY2026,
+Permyear2,RY2025,
+Permyear3,RY2024,
+pyear,26,
+pyear2,25,
+pyear3,24,
+permyr,2026,
+year,2026,
+perm_year,RY 2026,
+predictyr,RY2029,
+predict,2029,
+compareyr,RY2023,
+compare_yr,RY 2023,
+prev,RY2025,
+cycle,2,
+masterpath,/sas_data_cms/Project/PERM/Statistical Reporting/&permyear.,
+ServiceCategory_Cycle,RY26_ServiceCategory_Cycle,
+ServiceCategory_Rolling,RY26_ServiceCategory_Rolling,
+Claim_Category_Crosswalk,RY23-RY26 Claim Category Crosswalk,
+RC_Final_Data,Claims Master File,"changes with each run (monthly); do not include a filetype postscript (ie. Xls, xlsx) SAS will assign"
+RC_Final_Data_Range,ClaimMaster$A1:AS20000,likely changes with each run (monthly)
+Lewin_Final_Data,final_comparison4ccv2_20260305,changes with each run (monthly)
+RC_Overturn_Data,Final Findings for Recalculation FY 2015 - 02-02-2017.xlsx,
+RC_Overturn_Data_Sheet,Details,
+Pop_Data,ry26universesamplecnt20260305,changes with each run (monthly)
+DP_Sub_Categories,Dp_subcat_change.xls,
+MR_Sub_Categories,Mr_subcat_change.xls,
+Overturns,FALSE,
+Dynamic,FALSE,
+Eligibility_Sample_Data,NONE,
+Eligibility_Pop_Data,NONE,
+subcat_change_rolling,Subcategories Rolling.XLSX,
+current_run_folder,Backup 03112026 - Mar datacut,"Set the backup folder for the current run of the data (format: Backup ""MMDDYY"" - ""MMM"" datacut), match RC rawdata date"
+previous_run_folder,Backup 02182026 - Feb datacut,"changes with each run (monthly); before a new run, set to the previous month's current_run _folder"
+datacut_month,March,changes with each run (monthly); use full month name
+subcat_change_byPERMID,Changes by PERM ID-including rolling.xls,
+frozen,FY2014,REMOVE THIS
+SampleSizeCalc,RY2029,
+RC_MR_Data,MR Findings File,changes with each run (monthly)
+RC_MR_Data_Range,MRFindings$A1:L20000,
+RC_DP_Data,DP Findings File,changes with each run (monthly)
+RC_DP_Data_Range,DPFindings$A1:K20000,
+RC_ER_Data,ER Findings File,changes with each run (monthly)
+RC_ER_Data_Range,ERFindings$A1:S20000,
+RC_Elig_Data,Eligibility Master File,changes with each run (monthly)
+RC_Elig_Data_Range,EligibilityMaster$A1:AP20000,
+ERC_FMAP_rate,PERMERC_RY2025FMAP_01312025,changes yearly (csv format)
+ERC_FMAP_rate_range,PERMERC_RY2025FMAP_01312025$A1:G35,changes yearly (ensure tab name is correct)
+ERC_Unwinding_Data,PERMERC_RY2026_UnwindingErrors_20260323,changes with each interation of unwinding data
+ERC_Unwinding_Data_Range,Unwinding Errors$A4:AM1500,
