@@ -12,3 +12,4 @@ testpaths = ["tests"]
 
 [project.scripts]
 claims-run = "claims_python.run_claims:main"
+claims-master = "claims_python.master_claims:main"

@@ -1,7 +1,28 @@
 # Running converted Claims programs
 
-## Primary entry point
-Run the converted program CLI:
+## If you want the **SAS Master Program equivalent**
+Run this command:
+
+```bash
+python -m claims_python.master_claims \
+  --repo-root . \
+  --input-dir ./input_data \
+  --output-dir ./output_data \
+  --pyear 2026 \
+  --precision 28
+```
+
+This is the top-level Python entrypoint equivalent to running the Claims portion of:
+- `Master Program/Master Program Forecasting Rates.sas`
+
+It will:
+1. validate required Claims SAS sources exist,
+2. run currently-native converted flow (`Manual Change for Claims Data Cleaning`),
+3. capture transpiled calls for Step 1/Step 2,
+4. write `master_claims_run_summary.json` under `--output-dir`.
+
+## Program-specific entrypoint (manual-change only)
+You can also run only the manual-change program directly:
 
 ```bash
 python -m claims_python.run_claims \
@@ -10,18 +31,6 @@ python -m claims_python.run_claims \
   --output-dir ./output_data \
   --pyear 2026
 ```
-
-## What this currently runs
-Currently implemented end-to-end:
-- `Claims Programs/Manual Change for Claims Data Cleaning.sas`
-
-Converted macro flow executed:
-1. `manual_raw_data_change_error_mr`
-2. `manual_raw_data_change_error_dp`
-3. `manual_raw_data_change_claim`
-4. `manual_data_change`
-5. `pop_totals_manual_change`
-6. `pop_totals_manual_change_nodup`
 
 ## Expected input CSV files in `--input-dir`
 - `MR.csv`
@@ -34,7 +43,8 @@ Converted macro flow executed:
 - `DP.cleaned.csv`
 - `full_data.cleaned.csv`
 - `poptotals_temp.cleaned.csv`
+- `master_claims_run_summary.json` (when running `claims_python.master_claims`)
 
 ## Notes
-- The repository also contains structure-mirrored modules for all provided SAS files under `claims_python/converted_structure/`.
-- Remaining complex estimator/rate macros are still being ported and will be wired into this CLI as completed.
+- The repository contains structure-mirrored modules for all provided SAS files under `claims_python/converted_structure/`.
+- Remaining complex estimator/rate macros are transpiled and traceable, and are being replaced with native Python execution incrementally.
