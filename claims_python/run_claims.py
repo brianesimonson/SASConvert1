@@ -5,7 +5,7 @@ import csv
 from pathlib import Path
 from typing import Any
 
-from .converted_structure.claims_programs import manual_change_for_claims_data_cleaning as manual_prog
+from . import claims_macros as manual_prog
 
 
 def read_csv_rows(path: Path) -> list[dict[str, Any]]:

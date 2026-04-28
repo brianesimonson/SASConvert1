@@ -1,4 +1,4 @@
-"""Auto-generated structure mirror from SAS source.
+"""Auto-generated SAS->Python structural conversion module.
 
 Source: Master Program/Master Program Forecasting Rates.sas
 """
@@ -6,7 +6,7 @@ Source: Master Program/Master Program Forecasting Rates.sas
 from __future__ import annotations
 
 from typing import Any
-
+from ...transpiled_runtime import run_transpiled_macro, run_transpiled_program
 
 INCLUDES = [
     "/sas_data_cms/Project/PERM/Statistical Reporting/&masteryear./Master Program/Parameter List.sas",
@@ -52,9 +52,16 @@ INCLUDES = [
     "&masterpath./Master Program/Automated Forecasting Rates Backup V2.sas",
 ]
 
-def macro_var(var: Any = None, value: Any = None, *args: Any, **kwargs: Any) -> None:
+def macro_var(var: Any = None, value: Any = None, *args: Any, **kwargs: Any):
     """Converted entrypoint for SAS macro %macro_var."""
-    raise NotImplementedError(
-        "Macro %macro_var from Master Program/Master Program Forecasting Rates.sas has not been fully ported yet."
-    )
+    _arguments = {
+        "var": var,
+        "value": value,
+        "args": args,
+        "kwargs": kwargs,
+    }
+    _sas_block = """%global &var;
+%let &var=&value;
+/*%syslput &var=&value;*/"""
+    return run_transpiled_macro(source_file="Master Program/Master Program Forecasting Rates.sas", macro_name="macro_var", arguments=_arguments, sas_block=_sas_block)
 
